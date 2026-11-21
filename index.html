@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Generate a personalized Operating Systems termwork PDF in your browser.">
+  <title>OS Termwork Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="OS Termwork Generator home">
+        <span class="brand-mark">OS</span>
+        <span>Termwork<span class="brand-light"> Generator</span></span>
+      </a>
+      <span class="local-pill"><i></i> Runs in your browser</span>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="eyebrow"><span class="eyebrow-line"></span> OPERATING SYSTEMS · MCA</div>
+      <h1>Your termwork.<br><span>Personalized in seconds.</span></h1>
+      <p class="intro">Enter your student details and generate your own ready-to-submit OS termwork PDF. No account, no server, no waiting.</p>
+    </section>
+
+    <section class="generator-card" aria-labelledby="form-title">
+      <div class="card-heading">
+        <div>
+          <div class="step-label">ONE-STEP GENERATOR</div>
+          <h2 id="form-title">Student details</h2>
+        </div>
+        <div class="file-icon" aria-hidden="true">PDF</div>
+      </div>
+
+      <form id="student-form">
+        <label for="student-name">Full name</label>
+        <input id="student-name" name="name" type="text" placeholder="Enter your full name" maxlength="70" autocomplete="name" required>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="section">Section</label>
+            <input id="section" name="section" type="text" placeholder="Enter section" maxlength="12" required>
+          </div>
+          <div class="field">
+            <label for="roll">Roll number</label>
+            <input id="roll" name="roll" type="text" placeholder="Enter roll number" maxlength="12" required>
+          </div>
+        </div>
+
+        <div class="preview" aria-live="polite">
+          <div class="preview-label">TERMINAL USERNAME PREVIEW</div>
+          <code id="username-preview">student@STUDENT-PC1912</code>
+          <p>Generated automatically from the first name.</p>
+        </div>
+
+        <button id="generate-btn" type="submit">
+          <span class="button-text">Generate &amp; download PDF</span>
+          <span class="button-arrow" aria-hidden="true">↓</span>
+        </button>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="features" aria-label="What gets personalized">
+      <div class="feature"><span class="feature-number">01</span><div><strong>Every page header</strong><p>Name, MCA section and roll number.</p></div></div>
+      <div class="feature"><span class="feature-number">02</span><div><strong>8 terminal screenshots</strong><p>Username updated to match the student.</p></div></div>
+      <div class="feature"><span class="feature-number">03</span><div><strong>Original work preserved</strong><p>All 32 pages and program content retained.</p></div></div>
+    </section>
+
+    <footer>
+      <span>Made for easy OS termwork preparation.</span>
+      <span>Free · No login · No data stored</span>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
